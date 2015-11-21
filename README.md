@@ -38,7 +38,9 @@ npm install pg-gen --save
 ```
 
 ## API
-``` atMost([numItems=int]) ```
+```javascript
+  atMost([numItems=int]) 
+```
 Each generator execution will return no more than the specified number of items. It may return less upon reaching the end of the result set. A return of 0 means there is no more data.
 
 ``` lazyQuery([query=string], [params=object]) ```
