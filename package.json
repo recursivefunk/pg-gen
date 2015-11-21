@@ -1,0 +1,41 @@
+{
+  "name": "pg-gen",
+  "version": "0.1.0",
+  "description": "Lazy query results via generators",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jray/pg-gen.git"
+  },
+  "keywords": [
+    "postgres",
+    "generator",
+    "query",
+    "lazy",
+    "es6",
+    "javascript"
+  ],
+  "author": "Johnny Ray Austin <johnny@johnnyray.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jray/pg-gen/issues"
+  },
+  "homepage": "https://github.com/jray/pg-gen#readme",
+  "dependencies": {
+    "async": "^1.5.0",
+    "bluebird": "^3.0.5",
+    "pg-cursor": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^1.2.0",
+    "pg": "^4.4.3",
+    "tape": "^4.2.2"
+  },
+  "engines": {
+    "npm": "3.3.3",
+    "node": "4.2.1"
+  }
+}
