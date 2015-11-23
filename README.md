@@ -42,4 +42,18 @@ npm install pg-gen --save
 ```
 Each generator execution will return no more than the specified number of items. It may return less upon reaching the end of the result set. A return of 0 means there is no more data.
 
-``` lazyQuery([query=string], [params=object]) ```
+```javascript 
+  lazyQuery([query=string], [params=object]) 
+```
+
+## Tests
+You'll need to have a (running) database and a table with data in order to run the tests. Create your test environment like so
+```
+$ echo "DATABASE_URL=postgres://user:$ecret@localhost/test_db" >> test/test.env
+$ echo "TEST_TABLE=test_table" >> test/test.env
+```
+
+Then
+```
+$ npm test
+```
