@@ -1,7 +1,6 @@
 # pg-gen
 
-Paginate through a large result set using a generator.
-
+Use ES6 Generators to paginate through large Postgres result sets
 You'll need to use Node [4.2.0](https://nodejs.org/en/blog/release/v4.2.0/) and up
 
 ## Install
