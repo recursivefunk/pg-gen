@@ -3,6 +3,12 @@
 Use ES6 Generators to paginate through large Postgres result sets
 You'll need to use Node [4.2.0](https://nodejs.org/en/blog/release/v4.2.0/) and up
 
+## Explaination
+pg-gen uses a [postgresql cursor](http://www.postgresql.org/docs/9.2/static/plpgsql-cursors.html) for queries so that an entire result set is not returned and so memory is conserved. You utilize a generator to fetch the next `n` rows until there are no more results.
+
+## Why not stream the result set?
+Streams are great assuming you are ready to receive said results. Otherwise, you'd have to manually manage flow using pause/resume. And this will still eventually max out the internal buffer. Generators actually pause function execution. There is no buffer, there is only ever the data you request. If streams *push* data, generators allow you to *pull* data. I advise you to use whichever is best for solving your particular problem.
+
 ## Install
 
 ```
